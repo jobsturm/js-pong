@@ -1,0 +1,33 @@
+html, body {
+    margin: 0px;
+    padding: 0px;
+} 
+body {
+    background-color: #1a1a1a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: none;    
+}
+
+.canvas-holder {
+    background-color: black;
+    height: 90vh;
+    width: 100vw;
+}
+
+.canvas-data {
+    width: 90vw;
+    margin-top: 5px;
+    color: #484848;
+    font-family: 'Arial';
+    text-transform: uppercase;
+    
+    .fps {
+        &:after {
+            content: "fps";
+            margin-left: 5px;
+        }
+    }
+}
