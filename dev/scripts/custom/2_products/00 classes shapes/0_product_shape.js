@@ -11,6 +11,15 @@ class Shape {
         this.setColor(this.color);
     } 
     
+    // base-down functions
+    setTop (y) {
+        this.top = y;
+        this.topCanvas = pong.canvas.height - y - this.height;
+    } 
+    setLeft (x) {
+        this.left = x;
+    }
+    
     setWidth (width) {
         this.width = width;
     }

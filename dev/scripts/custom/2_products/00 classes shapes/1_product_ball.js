@@ -8,7 +8,7 @@ class Ball extends Shape {
         this.setLeft();
     }
     setTop (y) {
-        this.top = pong.canvas.height - this.height;
+        this.topCanvas = pong.canvas.height - y - this.height;
     } 
     setLeft (x) {
         this.left = 0;

@@ -18,7 +18,14 @@ const frame = () => {
         pong.frameNumber += 1;
         pong.fpsCount += 1;
         pong.canvas.ctx.clearRect(0, 0, pong.canvas.width, pong.canvas.height);
+        
+        // updates
+        pong.paddle.update();
+        
+        // delivery
         deliverPaddle();
+        
+        // frame again!
         frame();
     });
 }

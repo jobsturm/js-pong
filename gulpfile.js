@@ -22,6 +22,7 @@ var gulp = require('gulp'),
     sass = require('gulp-sass'),
     browserSync = require('browser-sync').create(),
     autoprefixer = require('gulp-autoprefixer'),
+    versionAppend = require('gulp-version-append'),
     reload = browserSync.reload;
 
 
@@ -60,7 +61,6 @@ gulp.task('serve', function () {
 });
 
 // JS
-
 gulp.task('js-custom', function () {
     return gulp.src('dev/scripts/custom/**/*.js')
         .pipe(insert.prepend('/* Build by Job Sturm; started 2017 */'))
@@ -92,6 +92,7 @@ gulp.task('templates', ['js-custom'], function () {
 
 gulp.task('inline', ['js-custom'], function () {
     return gulp.src('dev/*.php')
+        .pipe(versionAppend(['html', 'js', 'css']))
         .pipe(fileinclude({
             prefix: '@@',
             basepath: 'dev'

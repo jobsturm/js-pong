@@ -7,6 +7,7 @@ const loaded = () => {
     pong.canvas.place();
     pong.paddleFactory.init();
     mouseEvents();
+    keyEvents();
     startLoop();
     watchList();
 }
