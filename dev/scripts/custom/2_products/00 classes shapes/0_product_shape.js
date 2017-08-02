@@ -1,9 +1,12 @@
 class Shape {
-    constuctor (width, height, color, layer) {
+    constuctor (width, height, color, layer, angle, centerTop, centerLeft) {
         this.width = width;
         this.height = height;
         this.color = color;
-        this.layer = layer;  
+        this.layer = layer;
+        this.angle = angle;
+        this.centerLeft = centerLeft || width / 2;
+        this.centerTop  = centerTop || height / 2;    
         this.init();
     }
     init () {
