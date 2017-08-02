@@ -24,17 +24,27 @@ class Paddle extends BaseMob {
         const paddlesGun = {
             name: "Paddles gun",
             width: 75,
-            height: 5,
+            height: 10,
             layer: 3, 
             color: "#e8e8e8",
             weight: 0,
             angle: 0,
             mob: self,
-            offsetLeft: 25,
+            offsetLeft: 15, 
             offsetTop: 25,
-            centerLeft: 5,
-            centerTop: 2.5,
-            usedBy: "paddle"
+            centerLeft: 15,
+            centerTop: 5,
+            usedBy: "paddle",
+            ammo: 500,
+            ammoType: "bullet",
+            maxAmmo: 500,
+            damage: 10,
+            range: 100,
+            bulletSpeed: 5,
+            fireCooldown: 20, // time between each shot in ms
+            recoil: 0,
+            reloadSpeed: 200,
+            magazineSize: 30
         }
         
         this.equipmentList = [new Gun(paddlesGun)];

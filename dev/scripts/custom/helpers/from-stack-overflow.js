@@ -24,3 +24,13 @@ const layer = (a, b) => {
     return 1;
   return 0;
 }
+
+// https://stackoverflow.com/questions/17456783/javascript-figure-out-point-y-by-angle-and-distance 
+const findNewPoint = (x, y, angle, distance) => {
+    var result = {};
+
+    result.x = Math.round(Math.cos(angle * Math.PI / 180) * distance + x);
+    result.y = Math.round(Math.sin((angle + 180) * Math.PI / 180) * distance + y);
+
+    return result;
+}

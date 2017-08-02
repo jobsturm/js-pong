@@ -1,16 +1,16 @@
 class Ball extends Shape {
-    constructor (width, height, color) {
-        super(width, color);
-        this.radius = width;
-        this.color = color;        
+    constructor (width, height, color, weight, layer, angle, centerTop, centerLeft) {
+        super(width, height, color, layer, centerTop, centerLeft);
+        this.width      = width;
+        this.height     = height;
+        this.color      = color;
+        this.layer      = layer;
+        this.weight     = weight;
+        this.angle      = angle;
+        this.centerLeft = centerLeft || width / 2;
+        this.centerTop  = centerTop || height / 2;
+        this.shape = "ball"; 
         this.init();
-        this.setTop();
-        this.setLeft();
-    }
-    setTop (y) {
-        this.topCanvas = pong.canvas.height - y - this.height;
-    } 
-    setLeft (x) {
-        this.left = 0;
+        this.addToDrawList();
     }
 }
