@@ -1,6 +1,6 @@
 class Paddle extends BaseMob {
-    constructor (width, height, color, weight) {
-        super(width, height, color, weight);
+    constructor (width, height, color, weight, layer) {
+        super(width, height, color, weight, layer);
         
         // settings
         this.settings = pong.paddleFactory.settings;

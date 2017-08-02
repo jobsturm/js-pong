@@ -16,3 +16,11 @@ NodeList.prototype.remove = HTMLCollection.prototype.remove = function() {
     }
 }
 
+// https://stackoverflow.com/questions/1129216/sort-array-of-objects-by-string-property-value-in-javascript
+const layer = (a, b) => {
+  if (a.layer < b.layer)
+    return -1;
+  if (a.layer > b.layer)
+    return 1;
+  return 0;
+}

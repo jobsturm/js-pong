@@ -20,11 +20,12 @@ const frame = () => {
         pong.canvas.ctx.clearRect(0, 0, pong.canvas.width, pong.canvas.height);
         
         // updates
-        pong.paddle.update();
-        
-        // delivery
-        deliverPaddle();
-        
+        for (item of pong.shapes) {
+            item.shape.update();
+            // deliv[ery
+            deliver(item.shape);
+        }
+
         // frame again!
         frame();
     });
