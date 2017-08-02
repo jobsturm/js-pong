@@ -20,7 +20,24 @@ class Paddle extends BaseMob {
     }
     
     setPaddlesEquipement () {
-        this.equipmentList = [new Equipment(75, 5, "#ffffff", 0, 3, 0, this, "weapon", 25, 25, 0, 2.5)];
+        const self = this;
+        const paddlesGun = {
+            name: "Paddles gun",
+            width: 75,
+            height: 5,
+            layer: 3, 
+            color: "#e8e8e8",
+            weight: 0,
+            angle: 0,
+            mob: self,
+            type: "weapon",
+            offsetLeft: 25,
+            offsetTop: 25,
+            centerLeft: 0,
+            centerTop: 2.5
+        }
+        
+        this.equipmentList = [new Equipment(paddlesGun)];
     }
     
     update () {
