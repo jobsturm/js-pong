@@ -26,7 +26,7 @@ class Paddle extends BaseMob {
             width: 75,
             height: 5,
             layer: 3, 
-            color: "#ffffff",
+            color: "#e8e8e8",
             weight: 0,
             angle: 0,
             mob: self,
