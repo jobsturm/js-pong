@@ -20,7 +20,7 @@ class Paddle extends BaseMob {
     }
     
     setPaddlesEquipement () {
-        this.equipmentList = [new Equipment(75, 5, 3, "#ffffff", "weapon", 25, 25)]
+        this.equipmentList = [new Equipment(75, 5, 3, "#ffffff", this, "weapon", 25, 25, 10, 2.5)]
     }
     
     update () {
@@ -34,8 +34,6 @@ class Paddle extends BaseMob {
             this.jump.update();        
         }
         
-        this.updateEquipment();
-        this.updatePhysics();
-        
+        this.updatePhysics();        
     }        
 } 
