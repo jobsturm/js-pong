@@ -1,11 +1,14 @@
 class BaseMob extends Shape {
-    constructor (width, height, color, weight, layer) {
-        super(width, height, color, layer);
-        this.width    = width;
-        this.height   = height;
-        this.color    = color;
-        this.layer    = layer;
-        this.weight   = weight;
+    constructor (width, height, color, weight, layer, angle, centerTop, centerLeft) {
+        super(width, height, color, layer, centerTop, centerLeft);
+        this.width      = width;
+        this.height     = height;
+        this.color      = color;
+        this.layer      = layer;
+        this.weight     = weight;
+        this.angle      = angle;
+        this.centerLeft = centerLeft || width / 2;
+        this.centerTop  = centerTop || height / 2;
         this.grounded = false;
         
         this.setPhysics();
