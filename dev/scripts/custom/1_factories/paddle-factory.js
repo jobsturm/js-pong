@@ -13,6 +13,5 @@ pong.paddleFactory.init = () => {
                               pong.paddleFactory.settings.color, 
                               pong.paddleFactory.settings.weight,
                               pong.paddleFactory.settings.layer);
-    pong.paddle.addToDrawList();
 };
  

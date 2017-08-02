@@ -10,7 +10,6 @@ class BaseMob extends Shape {
         
         this.setPhysics();
         this.setActions();
-        this.setEquipment();
     }
     
     setPhysics () {
@@ -21,13 +20,6 @@ class BaseMob extends Shape {
         this.jump = new Jump(this);
     }
     
-    setEquipment () {
-        if (!this.equipmentList) return 'No equipment found';
-        
-        for (equipment in this.equipmentList) {
-            console.log(equipment);
-        }
-    }
     
     updatePhysics () {
         this.gravity.update();

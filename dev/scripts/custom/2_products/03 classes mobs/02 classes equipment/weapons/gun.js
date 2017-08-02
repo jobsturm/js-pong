@@ -1,6 +1,6 @@
-class Gun extends Shape {
+class Gun extends Equipment {
     constructor (width, height, color, ammo, reloadSpeed, fireRate) {
-        super(width, height, color);
+        super(width, height, color, layer);
         
         this.ammo = ammo;
         this.reloadSpeed = reloadSpeed;
