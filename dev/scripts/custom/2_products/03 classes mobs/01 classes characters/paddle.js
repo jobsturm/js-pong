@@ -15,8 +15,13 @@ class Paddle extends BaseMob {
         this.init();
         this.setTop(100);
         this.setLeft(200);
-        console.log(this);
+        this.setPaddlesEquipement();
     }
+    
+    setPaddlesEquipement () {
+        
+    }
+    
     update () {
         const self = this;
         this.updatePhysics();
