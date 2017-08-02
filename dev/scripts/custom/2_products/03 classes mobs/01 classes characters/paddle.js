@@ -1,6 +1,6 @@
 class Paddle extends BaseMob {
-    constructor (width, height, color, weight, layer) {
-        super(width, height, color, weight, layer);
+    constructor (width, height, color, weight, layer, angle, centerTop, centerLeft) {
+        super(width, height, color, weight, layer, angle, centerTop, centerLeft);
         
         // settings
         this.settings = pong.paddleFactory.settings;
@@ -20,7 +20,7 @@ class Paddle extends BaseMob {
     }
     
     setPaddlesEquipement () {
-        this.equipmentList = [new Equipment(75, 5, 3, "#ffffff", this, "weapon", 25, 25, 10, 2.5)]
+        this.equipmentList = [new Equipment(75, 5, "#ffffff", 0, 3, 0, this, "weapon", 25, 25, 0, 2.5)];
     }
     
     update () {
