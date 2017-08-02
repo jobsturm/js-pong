@@ -7,8 +7,8 @@ class Equipment extends Shape {
         this.color  = data.color;
         this.layer  = data.layer;
         this.angle  = data.angle;
-        this.centerLeft = data.centerLeft || this.width / 2;
-        this.centerTop  = data.centerTop || this.height / 2;        
+        this.centerLeft = data.centerLeft || this.width  / 2;
+        this.centerTop  = data.centerTop  || this.height / 2;        
         
         this.mob        = data.mob;
         this.type       = data.type;
@@ -20,5 +20,8 @@ class Equipment extends Shape {
     update () {
         this.setLeft(this.mob.left + this.offsetLeft);
         this.setTop(this.mob.top + this.offsetTop);
+        this.setAngle(this.angle);
+        
+        if (this.equipmentTypeUpdate) this.equipmentTypeUpdate();
     }
 }

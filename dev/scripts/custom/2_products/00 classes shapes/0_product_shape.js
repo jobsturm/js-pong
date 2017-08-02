@@ -33,6 +33,9 @@ class Shape {
     setColor (color) {
         this.color = color;
     }
+    setAngle (angle) {
+        this.angle = angle;
+    }
     
     // add to draw list
     addToDrawList () {

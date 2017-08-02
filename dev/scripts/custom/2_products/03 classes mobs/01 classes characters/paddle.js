@@ -30,14 +30,14 @@ class Paddle extends BaseMob {
             weight: 0,
             angle: 0,
             mob: self,
-            type: "weapon",
             offsetLeft: 25,
             offsetTop: 25,
-            centerLeft: 0,
-            centerTop: 2.5
+            centerLeft: 5,
+            centerTop: 2.5,
+            usedBy: "paddle"
         }
         
-        this.equipmentList = [new Equipment(paddlesGun)];
+        this.equipmentList = [new Gun(paddlesGun)];
     }
     
     update () {
