@@ -1,11 +1,13 @@
 class BaseMob extends Shape {
-    constructor (width, height, color, weight) {
-        super(width, height, color, weight);
+    constructor (width, height, color, weight, layer) {
+        super(width, height, color, layer);
         this.width    = width;
         this.height   = height;
         this.color    = color;
+        this.layer    = layer;
         this.weight   = weight;
         this.grounded = false;
+        
         this.setPhysics();
         this.setActions();
         this.setEquipment();
@@ -32,7 +34,7 @@ class BaseMob extends Shape {
         if (this.top <= 0) { 
             this.grounded = true; 
             this.jump.endJump(); 
-        } 
+        }
     }
     
     // movement
@@ -41,5 +43,5 @@ class BaseMob extends Shape {
     }
     moveRight () {
         this.setLeft (this.left + this.settings.movementSpeedHorizontal);
-    }
+    }    
 }

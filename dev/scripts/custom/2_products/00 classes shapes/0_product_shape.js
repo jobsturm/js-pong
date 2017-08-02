@@ -1,8 +1,9 @@
 class Shape {
-    constuctor (width, height, color) {
+    constuctor (width, height, color, layer) {
         this.width = width;
         this.height = height;
         this.color = color;
+        this.layer = layer;  
         this.init();
     }
     init () {
@@ -29,4 +30,16 @@ class Shape {
     setColor (color) {
         this.color = color;
     }
+    
+    // add to draw list
+    addToDrawList () {
+        const self = this;
+        pong.shapes.push({
+            shape: this,
+            layer: this.layer
+        });
+        
+        // move this later, because right now it's inefficient
+        pong.shapes.sort(layer);
+    }    
 } 
