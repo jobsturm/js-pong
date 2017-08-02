@@ -14,6 +14,7 @@ class Gravity {
         } else {
             this.velocity += 0.2;
             this.mob.setTop(this.mob.top - (this.mob.weight * this.velocity));
+            this.mob.updateEquipment();
         }
     }
     velocityReset () {
